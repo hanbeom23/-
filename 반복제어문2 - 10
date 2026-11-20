@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
+        for (int k = 1; k <= 9; k++) {
+            if (a <= b) {
+                for (int dan = a; dan <= b; dan++) {
+                    System.out.printf("%d * %d = %2d   ", dan, k, dan * k);
+                }
+            } else {
+                for (int dan = a; dan >= b; dan--) {
+                    System.out.printf("%d * %d = %2d   ", dan, k, dan * k);
+                }
+            }
+            System.out.println();
+        }
+    }
+}
