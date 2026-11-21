@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int[] a = new int[100];
+        int cnt = 0;
+
+        while (cnt < 100) {
+            int x = s.nextInt();
+            if (x == 0) break;
+            a[cnt] = x;
+            cnt++;
+        }
+
+        System.out.println(cnt);
+
+        for (int i = 0; i < cnt; i++) {
+            if (a[i] % 2 != 0) System.out.print(a[i] * 2 + " ");
+            else System.out.print(a[i] / 2 + " ");
+        }
+        System.out.println();
+    }
+}
