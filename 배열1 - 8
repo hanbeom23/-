@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int[] a = new int[100];
+        int n = 0, cnt = 0, sum = 0;
+
+        while (n < 100) {
+            int x = s.nextInt();
+            if (x == 0) break;
+            a[n] = x;
+            n++;
+
+            if (x % 5 == 0) {
+                cnt++;
+                sum += x;
+            }
+        }
+
+        double avg = (cnt > 0) ? (double) sum / cnt : 0;
+
+        System.out.println("Multiples of 5 : " + cnt);
+        System.out.println("sum : " + sum);
+        System.out.printf("avg : %.1f\n", avg);
+    }
+}
