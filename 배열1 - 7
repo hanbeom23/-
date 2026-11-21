@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int[] a = new int[100];
+        int cnt = 0;
+        int max = -1000;
+        int min = 1000;
+
+        while (true) {
+            int x = s.nextInt();
+            if (x == 999) break;
+            a[cnt] = x;
+            cnt++;
+
+            if (x > max) max = x;
+            if (x < min) min = x;
+        }
+
+        System.out.println("max : " + max);
+        System.out.println("min : " + min);
+    }
+}
