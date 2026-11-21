@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        int[] a = new int[100];
+
+        int cnt = 0;
+        while (cnt < 100) {
+            int x = s.nextInt();
+            if (x == -1) 
+                break;
+                a[cnt] = x;
+                cnt++;
+            
+        }
+        
+        int start = cnt - 3;
+        if(start < 0) start = 0;
+
+        for(int i = start; i < cnt; i++) { 
+            System.out.print(a[i] + " ");
+        }
+    }
+}
