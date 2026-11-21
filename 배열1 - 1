@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+
+        double[] a = new double[10];
+        for (int i = 0; i < 10; i++) {
+            a[i] = s.nextDouble();
+        }
+
+        for (int j = 9; j >= 0; j--) {
+            System.out.print(a[j] + " ");
+        }
+    }
+}
